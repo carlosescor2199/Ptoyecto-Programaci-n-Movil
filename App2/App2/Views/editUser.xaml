@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.editUser">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="-30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <BoxView BackgroundColor="#2EB3FF"  Grid.Row="0"/>
+                <BoxView BackgroundColor="White" Grid.Row="1" CornerRadius="30,30,0,0"/>
+
+                <!--Margin and content row 0-->
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Editar usuarios" TextColor="White" FontSize="45" Grid.Column="1" VerticalOptions="End" Margin="0,0,0,30"/>
+
+                </Grid>
+
+                <!--Margin and content row 1-->
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Column="1">
+                        <Label Text="Bienvenido" TextColor="#004369" FontSize="40" Margin="0,20,0,0"/>
+                        <Label Text="Por favor edite los compos a continuación"/>
+
+                        <!--Inputs and icons - Full name-->
+
+                        <Grid Margin="0,30,0,0" RowSpacing="30">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+
+                                <!--Container icons-->
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Frame BackgroundColor="#004369" Grid.Column="0" Padding="5,0,5,0" CornerRadius="5">
+                                    <Image Source="user3.png"/>
+                                </Frame>
+
+                                <!--Input and label Right-->
+
+                                <Grid Grid.Column="1" Padding="0,0,0,0" RowSpacing="-30">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Nombre completo" TextColor="#004369" FontAttributes="Bold" Grid.Row="0" VerticalOptions="Start" TranslationX="3" TranslationY="-3"/>
+                                    <Entry Grid.Row="1" TranslationY="6" HeightRequest="150" x:Name="EntryNombres" />
+                                </Grid>
+                            </Grid>
+
+                            <!--Inputs and icons - CC-->
+
+                            <Grid Grid.Row="1">
+
+                                <!--Container icons-->
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Frame BackgroundColor="#004369" Grid.Column="0" Padding="5,0,5,0" CornerRadius="5">
+                                    <Image Source="cc2.png"/>
+                                </Frame>
+
+                                <!--Input and label Right-->
+
+                                <Grid Grid.Column="1" Padding="0,0,0,0" RowSpacing="-30">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="CC" TextColor="#004369" FontAttributes="Bold" Grid.Row="0" VerticalOptions="Start" TranslationX="3" TranslationY="-3"/>
+                                    <Entry Grid.Row="1" TranslationY="6" HeightRequest="150" x:Name="EntryCedula"/>
+                                </Grid>
+                            </Grid>
+
+                            <!--Inputs and icons - Cell-->
+
+                            <Grid Grid.Row="2">
+
+                                <!--Container icons-->
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Frame BackgroundColor="#004369" Grid.Column="0" Padding="5,0,5,0" CornerRadius="5">
+                                    <Image Source="phone2.png"/>
+                                </Frame>
+
+                                <!--Input and label Right-->
+
+                                <Grid Grid.Column="1" Padding="0,0,0,0" RowSpacing="-30">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Celular" TextColor="#004369" FontAttributes="Bold" Grid.Row="0" VerticalOptions="Start" TranslationX="3" TranslationY="-3"/>
+                                    <Entry Grid.Row="1" TranslationY="6" HeightRequest="150" x:Name="EntryCelular"/>
+                                </Grid>
+                            </Grid>
+
+                            <!--Inputs and icons - New password-->
+
+                            <Grid Grid.Row="3">
+
+                                <!--Container icons-->
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Frame BackgroundColor="#004369" Grid.Column="0" Padding="5,0,5,0" CornerRadius="5">
+                                    <Image Source="password1.png"/>
+                                </Frame>
+
+                                <!--Input and label Right-->
+
+                                <Grid Grid.Column="1" Padding="0,0,0,0" RowSpacing="-30">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Nueva contraseña" TextColor="#004369" FontAttributes="Bold" Grid.Row="0" VerticalOptions="Start" TranslationX="3" TranslationY="-3"/>
+                                    <Entry Grid.Row="1" TranslationY="6" HeightRequest="150" x:Name="EntryContraseña" IsPassword="True"/>
+                                </Grid>
+                            </Grid>
+
+                            <!--Inputs and icons - Confirm New password-->
+
+                            <Grid Grid.Row="4">
+
+                                <!--Container icons-->
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Frame BackgroundColor="#004369" Grid.Column="0" Padding="5,0,5,0" CornerRadius="5">
+                                    <Image Source="password1.png"/>
+                                </Frame>
+
+                                <!--Input and label Right-->
+
+                                <Grid Grid.Column="1" Padding="0,0,0,0" RowSpacing="-30">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Confirmar nueva contraseña" TextColor="#004369" FontAttributes="Bold" Grid.Row="0" VerticalOptions="Start" TranslationX="3" TranslationY="-3"/>
+                                    <Entry Grid.Row="1" TranslationY="6" HeightRequest="150" x:Name="EntryNuevaContraseña" IsPassword="True"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Button Text="Confirmar" Grid.Column="1" BackgroundColor="#004369" CornerRadius="15" Margin="0,30,0,0" TextColor="White" Clicked="btnActualizar_Clicked"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Eliminar" Grid.Column="1" BackgroundColor="#004369" CornerRadius="15" Margin="0,30,0,0" TextColor="White" Clicked="btnElimniar_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.Login">
+    <ScrollView>
+        <Grid>
+            <!--Grid principal-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Grid.Column="0" Grid.Row="0" Padding="0">
+                <Image Source="Login.png" Aspect="AspectFill" Grid.Column="0" Grid.Row="0"/>
+            </Frame>
+
+            <RelativeLayout HorizontalOptions="Center">
+                <Frame BackgroundColor="Transparent" Margin="0,100,0,0" Padding="0" >
+                    <Image Source="presto.png" Aspect="AspectFill"/>
+                </Frame>
+                
+            </RelativeLayout>
+            
+            <RelativeLayout HorizontalOptions="Center">
+                <Frame HeightRequest="100" WidthRequest="150" Margin="0,600,0,0" Padding="0" BackgroundColor="Transparent">
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+
+                        <Frame  Grid.Row="0" Padding="0">
+                            <Label Text="Soporte técnico" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold"/>
+                        </Frame>
+
+                        <Grid Grid.Row="1" ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame Padding="0" Grid.Column="0">
+                                <Image Source="facebook.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            </Frame>
+                            <Frame Padding="0" Grid.Column="1">
+                                <Image Source="whatsapp.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1"/>
+                            </Frame>
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </RelativeLayout>
+
+            <RelativeLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Frame HeightRequest="300" WidthRequest="300" Padding="0">
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.5*"/>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="1.5*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Horizontal"  Grid.Row="1" Grid.Column="1">
+                            
+                            <Image Source="user2.png"/>
+                            <Entry HorizontalOptions="FillAndExpand" VerticalOptions="Center" Placeholder="Usuario" x:Name="EntryUser"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                            <Image Source="password2.png"/>
+                            <Entry  HorizontalOptions="FillAndExpand" VerticalOptions="Center" Placeholder="Contraseña" x:Name="EntryPassword" IsPassword="True"/>
+                        </StackLayout>
+                        <Button Grid.Row="3" Grid.Column="1" Text="Ingresar" CornerRadius="20" BackgroundColor="#004369" TextColor="White" VerticalOptions="Center" FontAttributes="Bold" Clicked="EventButtonLogin"/>
+                        <Button Grid.Row="4" Grid.Column="1" Text="Registrarse" CornerRadius="20" BackgroundColor="White" TextColor="#004369" VerticalOptions="Center" Clicked="EventButtonRegister"/>
+                    </Grid>
+                </Frame>
+
+            </RelativeLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
